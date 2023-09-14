@@ -1,0 +1,17 @@
+<?php
+// Verificar si se han enviado datos de inicio de sesión
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $usuario = $_POST["usuario"];
+    $contrasena = $_POST["contrasena"];
+
+    // Aquí puedes realizar la verificación de autenticación
+    // por ejemplo, comparar los datos con una base de datos de usuarios
+
+    // Ejemplo de verificación simple (solo para demostración)
+    if ($usuario === "usuario" && $contrasena === "contrasena") {
+        echo "Inicio de sesión exitoso. Bienvenido, $usuario!";
+    } else {
+        echo "Nombre de usuario o contraseña incorrectos.";
+    }
+}
+?>
